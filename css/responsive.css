@@ -478,21 +478,21 @@
   .back-to-top {
     bottom: 16px;
     right: 16px;
-    width: 36px;
-    height: 36px;
-    font-size: 1rem;
+    width: 48px;
+    height: 48px;
+    font-size: 1.4rem;
   }
 
   .whatsapp-float {
-    bottom: 62px;
+    bottom: 84px;
     right: 16px;
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
   }
 
   .whatsapp-float svg {
-    width: 16px;
-    height: 16px;
+    width: 28px;
+    height: 28px;
   }
 }
 
@@ -519,10 +519,15 @@
   }
 
   .whatsapp-float {
-    bottom: 60px;
+    bottom: 80px;
     right: 16px;
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .whatsapp-float svg {
+    width: 28px;
+    height: 28px;
   }
 }
 
