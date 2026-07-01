@@ -1,0 +1,592 @@
+/* ============================================================
+   IRONFORGE GYM — Responsive Styles
+   ============================================================ */
+
+/* ==================== TABLET (768px - 1024px) ==================== */
+@media screen and (max-width: 1024px) {
+  /* Layout */
+  .container {
+    padding: 0 20px;
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  /* Hero */
+  .hero__title {
+    font-size: clamp(3.5rem, 12vw, 7rem);
+  }
+
+  /* About */
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about__visual {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .about__floating-card--1 {
+    right: 0;
+  }
+
+  .about__floating-card--2 {
+    left: 0;
+  }
+
+  /* Why Us */
+  .whyus__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Statistics */
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .stats__item:not(:last-child)::after {
+    display: none;
+  }
+
+  .stats__number {
+    font-size: 3rem;
+  }
+
+  /* Services */
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Programs */
+  .programs__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .programs__panel#intermediate .programs__grid,
+  .programs__panel#advanced .programs__grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+
+  /* Pricing */
+  .pricing__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing__card--featured {
+    transform: none;
+  }
+
+  .pricing__card--featured:hover {
+    transform: translateY(-8px);
+  }
+
+  /* BMI */
+  .bmi__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* Gallery */
+  .gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery__item--wide {
+    grid-column: span 2;
+  }
+
+  .gallery__item--tall {
+    grid-row: span 1;
+  }
+
+  /* Trainers */
+  .trainers__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Contact */
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* Footer */
+  .footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  /* Floating CTA */
+  .floating-cta {
+    bottom: 20px;
+    left: 20px;
+    padding: 12px 20px;
+    font-size: 0.75rem;
+  }
+
+  /* Back to Top */
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .whatsapp-float {
+    bottom: 72px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .whatsapp-float svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* ==================== MOBILE (< 768px) ==================== */
+@media screen and (max-width: 767px) {
+  /* Layout */
+  .container {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section__header {
+    margin-bottom: 40px;
+  }
+
+  .section__title {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+  }
+
+  /* Hide default cursor on mobile */
+  .cursor,
+  .cursor__follower,
+  .mouse-glow {
+    display: none;
+  }
+
+  /* Navbar */
+  .navbar__nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: rgba(5, 5, 5, 0.98);
+    backdrop-filter: blur(20px);
+    border-left: 1px solid var(--clr-border);
+    padding: 80px 32px 32px;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+  }
+
+  [data-theme="light"] .navbar__nav {
+    background: rgba(255, 255, 255, 0.98);
+  }
+
+  .navbar__nav.active {
+    right: 0;
+  }
+
+  .navbar__list {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .navbar__link {
+    font-size: 1.1rem;
+  }
+
+  .navbar__cta {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 90vh;
+    padding-top: 70px;
+  }
+
+  .hero__badge {
+    margin-bottom: 32px;
+    font-size: 0.65rem;
+    padding: 6px 16px;
+  }
+
+  .hero__title {
+    font-size: clamp(3rem, 15vw, 4.5rem);
+    letter-spacing: 2px;
+  }
+
+  .hero__subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero__trust {
+    gap: 24px;
+  }
+
+  .hero__trust-number {
+    font-size: 2rem;
+  }
+
+  .hero__scroll-indicator {
+    display: none;
+  }
+
+  /* Marquee */
+  .marquee__content {
+    font-size: 0.75rem;
+    gap: 32px;
+  }
+
+  /* About */
+  .about__features {
+    grid-template-columns: 1fr;
+  }
+
+  .about__floating-card {
+    display: none;
+  }
+
+  .about__image-wrapper {
+    aspect-ratio: 3/4;
+  }
+
+  /* Why Us */
+  .whyus__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .whyus__card {
+    padding: 28px 24px;
+  }
+
+  /* Statistics */
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .stats__item {
+    padding: 20px 16px;
+  }
+
+  .stats__number {
+    font-size: 2.5rem;
+  }
+
+  .stats__plus,
+  .stats__percent {
+    font-size: 1.8rem;
+  }
+
+  .stats__label {
+    font-size: 0.7rem;
+  }
+
+  /* Services */
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    height: 300px;
+  }
+
+  /* Programs */
+  .programs__tabs {
+    gap: 4px;
+    padding: 4px;
+  }
+
+  .programs__tab {
+    padding: 10px 16px;
+    font-size: 0.7rem;
+  }
+
+  .programs__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .programs__panel#intermediate .programs__grid,
+  .programs__panel#advanced .programs__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Pricing */
+  .pricing__grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .pricing__toggle {
+    flex-wrap: wrap;
+  }
+
+  .pricing__card-content {
+    padding: 32px 24px;
+  }
+
+  .pricing__amount {
+    font-size: 2.8rem;
+  }
+
+  /* BMI */
+  .bmi__card {
+    padding: 24px;
+  }
+
+  .bmi__info-card {
+    padding: 24px;
+  }
+
+  /* Gallery */
+  .gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .gallery__item--wide {
+    grid-column: span 2;
+    aspect-ratio: 16/9;
+  }
+
+  .gallery__filter {
+    padding: 10px 20px;
+    font-size: 0.7rem;
+  }
+
+  /* Trainers */
+  .trainers__grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  /* Testimonials */
+  .testimonial-card {
+    padding: 24px 16px;
+  }
+
+  .testimonial-card__text {
+    font-size: 0.95rem;
+  }
+
+  .testimonials__controls {
+    gap: 16px;
+  }
+
+  /* Schedule */
+  .schedule__table th {
+    padding: 12px 8px;
+    font-size: 0.7rem;
+  }
+
+  .schedule__table td {
+    padding: 10px 8px;
+    font-size: 0.75rem;
+  }
+
+  /* FAQ */
+  .faq__question {
+    font-size: 0.9rem;
+    padding: 20px 0;
+  }
+
+  /* Contact */
+  .contact__form-wrapper {
+    padding: 24px;
+  }
+
+  .contact__form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .contact__info-card {
+    padding: 24px;
+  }
+
+  .contact__map-placeholder {
+    padding: 24px;
+  }
+
+  /* Footer */
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer__content {
+    padding: 48px 0 0;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__bottom-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer__newsletter-form {
+    flex-direction: column;
+  }
+
+  /* Floating CTA */
+  .floating-cta {
+    bottom: 16px;
+    left: 16px;
+    padding: 10px 16px;
+    font-size: 0.7rem;
+  }
+
+  .floating-cta__text {
+    display: none;
+  }
+
+  .floating-cta__icon {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  /* Back to Top */
+  .back-to-top {
+    bottom: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .whatsapp-float {
+    bottom: 62px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .whatsapp-float svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* ==================== SMALL MOBILE (< 400px) ==================== */
+@media screen and (max-width: 400px) {
+  .hero__title {
+    font-size: clamp(2.5rem, 12vw, 3rem);
+  }
+
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats__number {
+    font-size: 2rem;
+  }
+
+  .gallery__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery__item--wide {
+    grid-column: span 1;
+  }
+
+  .whatsapp-float {
+    bottom: 60px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* ==================== LANDSCAPE MOBILE ==================== */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: 100vh;
+    padding: 100px 0 60px;
+  }
+
+  .hero__title {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  .hero__trust {
+    display: none;
+  }
+
+  .hero__scroll-indicator {
+    display: none;
+  }
+}
+
+/* ==================== PRINT ==================== */
+@media print {
+  .preloader,
+  .cursor,
+  .cursor__follower,
+  .mouse-glow,
+  .navbar,
+  .back-to-top,
+  .whatsapp-float,
+  .floating-cta,
+  .hero__scroll-indicator {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .section {
+    padding: 40px 0;
+    page-break-inside: avoid;
+  }
+}
+
+/* ==================== REDUCED MOTION ==================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
